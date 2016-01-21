@@ -2,7 +2,7 @@
 
 Load the Wolfram language script with
 
-<<~/Wolfram/bimatrix.m
+<<Wolfram/bimatrix.m
 
 For payoff matrices A and B, display the bimatrix with
 
@@ -12,8 +12,8 @@ Solve the game with
 
 NashEquilbria[A,B] for support enumeration algorithm
 
-NashEquilibira[A,B,Select->One] for Lemke Howson algorithm
+NashEquilibria[A,B,Select->One] for Lemke Howson algorithm
 
-NashEquilibrium[A,B,Select->s] for symbolic solution, where s 
-is a list of numerical substitutions ffor the symbols in A and B.
+NashEquilibria[A,B,Select->s] for symbolic solution, where s 
+is a list of numerical substitutions for the symbols in A and B.
 
