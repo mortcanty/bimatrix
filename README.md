@@ -2,7 +2,7 @@
 
 Load the Wolfram language script with
 
-<<Wolfram/bimatrix.m
+<<bimatrix.m
 
 For payoff matrices A and B, display the bimatrix with
 
