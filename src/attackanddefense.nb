@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     36414,       1037]
-NotebookOptionsPosition[     35452,       1000]
-NotebookOutlinePosition[     35791,       1015]
-CellTagsIndexPosition[     35748,       1012]
+NotebookDataLength[     36756,       1043]
+NotebookOptionsPosition[     35788,       1006]
+NotebookOutlinePosition[     36129,       1021]
+CellTagsIndexPosition[     36086,       1018]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -93,8 +93,10 @@ the bimatrix game for three targets:"
   3.662294598723763*^9, 3.6622946015847178`*^9}}],
 
 Cell[BoxData[
- RowBox[{"<<", "Wolfram/bimatrix.m"}]], "Input",
- CellChangeTimes->{{3.662289843669773*^9, 3.662289865731413*^9}}],
+ RowBox[{"<<", "Bimatrix/src/bimatrix.m"}]], "Input",
+ CellChangeTimes->{{3.662289843669773*^9, 3.662289865731413*^9}, {
+  3.662456196154024*^9, 3.662456200223529*^9}, {3.662466445339418*^9, 
+  3.662466448385091*^9}}],
 
 Cell[CellGroupData[{
 
@@ -117,14 +119,15 @@ Cell[BoxData[{
     RowBox[{"AA", ",", 
      RowBox[{"{", 
       RowBox[{"3", ",", "3"}], "}"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
- RowBox[{"BimatrixF", "[", 
+ RowBox[{"BimatrixForm", "[", 
   RowBox[{"A", ",", 
    RowBox[{"-", "A"}]}], "]"}]}], "Input",
  CellChangeTimes->{{3.6622899544861107`*^9, 3.662290014795135*^9}, {
   3.6622902947526913`*^9, 3.662290308181615*^9}, {3.662290686946247*^9, 
   3.662290687390212*^9}, {3.662291150869174*^9, 3.662291164631832*^9}, {
   3.662291335428668*^9, 3.662291366417515*^9}, {3.6622915657738857`*^9, 
-  3.662291583026128*^9}, {3.662292722102281*^9, 3.6622927351737947`*^9}}],
+  3.662291583026128*^9}, {3.662292722102281*^9, 3.6622927351737947`*^9}, {
+  3.66246646094696*^9, 3.662466462093713*^9}}],
 
 Cell[BoxData[
  TagBox[
@@ -158,7 +161,7 @@ Cell[BoxData[
            InterpretationBox["\<\"   \\!\\(\\(\\(-\\(\\((1 - p)\\)\\)\\)\\)\\\
 \\ a\\_1\\)\"\>",
             StringForm[
-            "   ``", (-(1 - $CellContext`p)) Subscript[$CellContext`a, 1]],
+            "   ``", -(1 - $CellContext`p) Subscript[$CellContext`a, 1]],
             Editable->False]},
           {
            
@@ -269,7 +272,7 @@ Cell[BoxData[
            InterpretationBox["\<\"   \\!\\(\\(\\(-\\(\\((1 - p)\\)\\)\\)\\)\\\
 \\ a\\_2\\)\"\>",
             StringForm[
-            "   ``", (-(1 - $CellContext`p)) Subscript[$CellContext`a, 2]],
+            "   ``", -(1 - $CellContext`p) Subscript[$CellContext`a, 2]],
             Editable->False]},
           {
            
@@ -380,7 +383,7 @@ Cell[BoxData[
            InterpretationBox["\<\"   \\!\\(\\(\\(-\\(\\((1 - p)\\)\\)\\)\\)\\\
 \\ a\\_3\\)\"\>",
             StringForm[
-            "   ``", (-(1 - $CellContext`p)) Subscript[$CellContext`a, 3]],
+            "   ``", -(1 - $CellContext`p) Subscript[$CellContext`a, 3]],
             Editable->False]},
           {
            
@@ -409,7 +412,8 @@ Cell[BoxData[
       "Rows" -> {False, {True}, False}, "RowsIndexed" -> {}}]],
   DisplayForm]], "Output",
  CellChangeTimes->{3.662292737639045*^9, 3.6623562370164413`*^9, 
-  3.6623564888842583`*^9, 3.6623578342767963`*^9}]
+  3.6623564888842583`*^9, 3.6623578342767963`*^9, 3.6624664634260683`*^9, 
+  3.662466634330833*^9}]
 }, Open  ]],
 
 Cell[TextData[{
@@ -479,7 +483,8 @@ Cell[BoxData[
  CellChangeTimes->{
   3.662290510759614*^9, 3.66229081049542*^9, {3.662291400840914*^9, 
    3.662291406590955*^9}, 3.66229161210036*^9, 3.662356258501796*^9, 
-   3.662356494191037*^9, 3.662357839665823*^9}]
+   3.662356494191037*^9, 3.662357839665823*^9, 3.662466469843553*^9, 
+   3.662466638747497*^9}]
 }, Open  ]],
 
 Cell["\<\
@@ -750,7 +755,8 @@ Cell[BoxData[
      Subscript[$CellContext`a, 2] Subscript[$CellContext`a, 3] + 
      Subscript[$CellContext`a, 1] (Subscript[$CellContext`a, 2] + 
        Subscript[$CellContext`a, 3]))}}]]], "Output",
- CellChangeTimes->{3.6623578456650267`*^9}]
+ CellChangeTimes->{3.6623578456650267`*^9, 3.662466485629108*^9, 
+  3.662466646343533*^9}]
 }, Open  ]],
 
 Cell[TextData[{
@@ -934,7 +940,7 @@ Cell[BoxData[
  CellChangeTimes->{{3.6622909983142033`*^9, 3.662291017766803*^9}, 
    3.662291088820759*^9, 3.6622914513590183`*^9, 3.662291551972151*^9, 
    3.66229162977402*^9, {3.66229168586272*^9, 3.6622917044572*^9}, 
-   3.662357855052602*^9}]
+   3.662357855052602*^9, 3.662466495399496*^9, 3.662466672019141*^9}]
 }, Open  ]],
 
 Cell[TextData[{
@@ -999,7 +1005,7 @@ are \n\n",
 }, Open  ]]
 },
 WindowSize->{808, 909},
-WindowMargins->{{Automatic, -917}, {Automatic, 25}},
+WindowMargins->{{Automatic, -1340}, {Automatic, -10}},
 FrontEndVersion->"10.0 for Linux ARM (32-bit) (February 3, 2015)",
 StyleDefinitions->"Default.nb"
 ]
@@ -1017,27 +1023,27 @@ Notebook[{
 Cell[CellGroupData[{
 Cell[580, 22, 103, 1, 92, "Title"],
 Cell[686, 25, 2407, 67, 218, "Text"],
-Cell[3096, 94, 128, 2, 32, "Input"],
+Cell[3096, 94, 231, 4, 32, "Input"],
 Cell[CellGroupData[{
-Cell[3249, 100, 999, 26, 77, "Input"],
-Cell[4251, 128, 9968, 283, 150, "Output"]
+Cell[3352, 102, 1050, 27, 77, "Input"],
+Cell[4405, 131, 10011, 284, 162, "Output"]
 }, Open  ]],
-Cell[14234, 414, 1169, 29, 154, "Text"],
+Cell[14431, 418, 1169, 29, 154, "Text"],
 Cell[CellGroupData[{
-Cell[15428, 447, 720, 18, 32, "Input"],
-Cell[16151, 467, 515, 14, 47, "Output"]
+Cell[15625, 451, 720, 18, 32, "Input"],
+Cell[16348, 471, 563, 15, 47, "Output"]
 }, Open  ]],
-Cell[16681, 484, 153, 3, 31, "Text"],
+Cell[16926, 489, 153, 3, 31, "Text"],
 Cell[CellGroupData[{
-Cell[16859, 491, 784, 15, 32, "Input"],
-Cell[17646, 508, 9041, 244, 98, "Output"]
+Cell[17104, 496, 784, 15, 32, "Input"],
+Cell[17891, 513, 9088, 245, 110, "Output"]
 }, Open  ]],
-Cell[26702, 755, 517, 13, 71, "Text"],
+Cell[26994, 761, 517, 13, 71, "Text"],
 Cell[CellGroupData[{
-Cell[27244, 772, 463, 12, 35, "Input"],
-Cell[27710, 786, 5751, 150, 98, "Output"]
+Cell[27536, 778, 463, 12, 35, "Input"],
+Cell[28002, 792, 5795, 150, 110, "Output"]
 }, Open  ]],
-Cell[33476, 939, 1960, 58, 175, "Text"]
+Cell[33812, 945, 1960, 58, 175, "Text"]
 }, Open  ]]
 }
 ]
