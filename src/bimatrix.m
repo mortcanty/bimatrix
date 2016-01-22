@@ -2,8 +2,6 @@ NashEquilibria::degen = "degenerate game";
 NashEquilibria::onlyone = "only one solution will be generated";
 
 Options[NashEquilibria] = {Select -> Automatic, Symbolic -> Automatic}
-Options[BimatrixForm] = {Labels -> Automatic}
-
 
 (*
         Option-handling
@@ -15,22 +13,9 @@ NashEquilibria[A_List,BB_List:{},opts___Rule]:=
      symbolic:=  Symbolic/.{opts}/.Options[NashEquilibria];
      result:= {};
      If[BB=={},B=-A,B=BB];
-     result:= NashEq[A]                         /;(symbolic===Automatic)&&(BB==={})&&
-                                                  (select===Automatic);
+     result:= NashEq[A]                         /;(symbolic===Automatic)&&(BB==={})&&(select===Automatic);
      result:= NashEq[A,B,symbolic]              /;(symbolic=!=Automatic)&&(select==Automatic);
      result:= NashEq[A,B]                       /;(symbolic==Automatic)&&(select==Automatic);
-     result:= NashEqAFQS[A,B,symbolic]          /;(symbolic=!=Automatic)&&(select==QS);
-     result:= NashEqAFQS[A,B]                   /;(symbolic==Automatic)&&(select==QS);
-     result:= NashEqAFESS[A,symbolic]           /;(symbolic=!=Automatic)&&(select==ESS);
-     result:= NashEqAFESS[A]                    /;(symbolic==Automatic)&&(select==ESS);
-     result:= NashEqAFPerfect[A,B,symbolic]     /;(symbolic=!=Automatic)&&(select==Perfect);
-     result:= NashEqAFPerfect[A,B]              /;(symbolic==Automatic)&&(select==Perfect);
-     result:= NashEqAF[A,B,symbolic]            /;(symbolic=!=Automatic)&&(select==All);
-     result:= NashEqAFv[A,B,symbolic]           /;(symbolic=!=Automatic)&&(select==AllVerbose);
-     result:= NashEqAF[A,B]                     /;(symbolic==Automatic)&&(select==All);
-     result:= NashEqAFv[A,B]                    /;(symbolic==Automatic)&&(select==AllVerbose);
-     result:= NashEqAFMNS[A/.symbolic,B/.symbolic]/;(symbolic=!=Automatic)&&(select==MNS);
-     result:= NashEqAFMNS[A,B]                  /;(symbolic==Automatic)&&(select==MNS);
      result:= NashEqLH[A,B,symbolic]            /;(symbolic=!=Automatic)&&(select==One);
      result:= NashEqLH[A,B]                     /;(symbolic==Automatic)&&(select==One);
      result];
@@ -149,8 +134,6 @@ NashEqLH[AAS_List,BBS_List,subs_List]:=
     I1=P.AAS.Q//Simplify;
     I2=P.BBS.Q//Simplify;
     {{P,I1,Q,I2}}  ];
-
-
 
 (*
         Support Enumeration Algorithm
