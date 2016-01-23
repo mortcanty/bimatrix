@@ -14,6 +14,7 @@
       ===================================================
 *)
 
+Needs["Combinatorica`"];
 
 BimatrixForm::usage =  "BimatrixForm[A,B] returns  the bimatrix
 structure of the game {A,B}.  For display purposes only."
