@@ -32,7 +32,7 @@ for the Lemke Howson algorithm
 
     NashEquilibria[A,B,Select->All] f
 
-or complete vertex enumeration.
+for complete vertex enumeration.
 
 For symbolic payoff matrices As and Bs, solve the game symbolicaly with
 
