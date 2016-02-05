@@ -47,3 +47,5 @@ Get help with
 
     ?NashEquilibria
     ?Select
+
+Load the Notebook resolvingconflicts1.nb
